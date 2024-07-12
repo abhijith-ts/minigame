@@ -1,0 +1,106 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsqu5y1dhyklv"]
+
+[ext_resource type="Texture2D" uid="uid://dwqyk02dyg8eq" path="res://assets/sprites/finbg.png" id="1_aj25t"]
+[ext_resource type="Script" path="res://scenes/mainmenu/main_menu.gd" id="1_sknuj"]
+[ext_resource type="FontFile" uid="uid://cvuf5yirjg72s" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_flgv4"]
+[ext_resource type="FontFile" uid="uid://odyse0dhj8wv" path="res://assets/fonts/PixelOperator8.ttf" id="3_hy1mk"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sknuj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 536.0
+offset_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.811123, 0.811123)
+texture = ExtResource("1_aj25t")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 130
+
+[node name="separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.325441, 0.325441, 0.325441, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("2_flgv4")
+theme_override_font_sizes/font_size = 80
+text = "Flipper"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="strt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hy1mk")
+theme_override_font_sizes/font_size = 24
+text = "Start"
+
+[node name="mgame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hy1mk")
+theme_override_font_sizes/font_size = 24
+text = "Minigame"
+
+[node name="qt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(136, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hy1mk")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
+
+[node name="crd" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.213668, 0.724611, 0.865916, 1)
+theme_override_colors/font_pressed_color = Color(0.213668, 0.724611, 0.865916, 1)
+theme_override_colors/font_hover_color = Color(0.213668, 0.724611, 0.865916, 1)
+theme_override_fonts/font = ExtResource("3_hy1mk")
+theme_override_font_sizes/font_size = 24
+text = "Credits"

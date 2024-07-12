@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=3 uid="uid://gvflpdvye1ox"]
+
+[ext_resource type="Script" path="res://scenes/won/won.gd" id="1_j65kx"]
+[ext_resource type="Texture2D" uid="uid://dwqyk02dyg8eq" path="res://assets/sprites/finbg.png" id="2_je7kr"]
+[ext_resource type="FontFile" uid="uid://cvuf5yirjg72s" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_lahxj"]
+[ext_resource type="FontFile" uid="uid://odyse0dhj8wv" path="res://assets/fonts/PixelOperator8.ttf" id="4_024yk"]
+
+[node name="won" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j65kx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 536.0
+offset_bottom = 303.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.811123, 0.811123)
+texture = ExtResource("2_je7kr")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 130
+
+[node name="separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.325441, 0.325441, 0.325441, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("3_lahxj")
+theme_override_font_sizes/font_size = 80
+text = "You Won !
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="separator2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="again" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_024yk")
+theme_override_font_sizes/font_size = 24
+text = "Play again ?"
+
+[node name="Home" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(160, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_024yk")
+theme_override_font_sizes/font_size = 24
+text = "Home"
+
+[node name="qt" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(136, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_024yk")
+theme_override_font_sizes/font_size = 24
+text = "Quit"
