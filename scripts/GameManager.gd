@@ -13,12 +13,12 @@ func add_point():
 @onready var time_label = $time_label
 @onready var retry = $"../player/Camera2D/Control/retry" as Button
 @onready var home = $"../player/Camera2D/Control/home" as Button
-@onready var re=preload("res://scenes/game.tscn") as PackedScene
+@onready var re=preload("res://scenes/mini.tscn") as PackedScene
 @onready var homepg=preload("res://scenes/mainmenu/main_menu.tscn") as PackedScene
 @onready var end = $"../end"
 
 var ftime=0
-var ctime=6
+var ctime=60
 func _on_game_timer_timeout():
 	ctime -=1
 	if ctime>=0:

@@ -4,7 +4,7 @@ extends Control
 @onready var qt = $MarginContainer/HBoxContainer/VBoxContainer/qt as Button
 @onready var mgame = $MarginContainer/HBoxContainer/VBoxContainer/mgame as Button
 @onready var crd = $MarginContainer/crd as Button
-@onready var start_level=preload("res://scenes/game.tscn") as PackedScene
+@onready var start_level=preload("res://scenes/mini.tscn") as PackedScene
 
 func _ready():
 	strt.button_down.connect(on_start_pressed)
